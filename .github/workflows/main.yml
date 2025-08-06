@@ -17,3 +17,13 @@ jobs:
 
       - name: Build And Deploy
         id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_DUNE_0413FA800 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          ###### Repository/Build Configurations ######
+          app_location: ".well-known"
+          output_location: ".well-known"
+          skip_app_build: true
+          ###### End of Repository/Build Configurations ######
