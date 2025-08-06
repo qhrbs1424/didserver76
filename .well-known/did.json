@@ -1,0 +1,48 @@
+{
+  "id": "did:web:aads.store",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:aads.store"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://aads.store/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/e719d3f0-1b5d-4a15-ad09-1fb04fc72011"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#5c4a6abba6774cdba55b5370a448fdf6vcSigningKey-a106c",
+      "controller": "did:web:aads.store",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "2R_aAN9bqU56CjcFZOJ2Ps2RLIJQaHwKykouNVU13e4",
+        "y": "5CgIvJyrXmRyfUxdJzvQMcF74474Ssl9dQk8eJLG7_c"
+      }
+    }
+  ],
+  "authentication": [
+    "#5c4a6abba6774cdba55b5370a448fdf6vcSigningKey-a106c"
+  ],
+  "assertionMethod": [
+    "#5c4a6abba6774cdba55b5370a448fdf6vcSigningKey-a106c"
+  ]
+}
